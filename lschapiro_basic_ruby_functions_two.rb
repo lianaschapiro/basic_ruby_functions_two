@@ -13,11 +13,12 @@ def analyze_text (document)
 	while i < doc_array.length
 		if doc_hash.has_key?(doc_array[i])
 			doc_hash[doc_array[i]] +=1
-		else doc_hash[doc_array[i]] =1
+		else
+			doc_hash[doc_array[i]] =1
 		end
 		i+=1
 	end
-	best_word = doc_hash.sort_by{|k, v| v}.last[0]
+	best_word = doc_hash.sort_by{|k, v| v}.last[0]  
 	puts "The most frequent word is " + best_word
 end
 
